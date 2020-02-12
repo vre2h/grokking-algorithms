@@ -1,0 +1,21 @@
+{
+  "name": "grokking-algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": ""
+  },
+  "keywords": [],
+  "author": "Oganisyan Vrezh",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.7.0",
+    "jest": "^25.1.0"
+  },
+  "dependencies": {}
+}
