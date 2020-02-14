@@ -1,3 +1,9 @@
+/**
+ * Depth-first search
+ * @param {any} tree - tree that needed to search
+ * @param {string} searchedText - text that need to find in tree
+ * @param {string} startNode - starting node
+ */
 const dfs = (tree, searchedText, startNode = 'start') => {
   const queue = [...tree[startNode]];
   const searched = [];
