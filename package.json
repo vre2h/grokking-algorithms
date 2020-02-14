@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watchAll",
-    "start": ""
+    "start": "",
+    "doc": "jsdoc --readme ./README.md --destination ./docs src/**/*.js"
   },
   "keywords": [],
   "author": "Oganisyan Vrezh",
@@ -19,6 +20,7 @@
     "jest": "^25.1.0"
   },
   "dependencies": {
+    "jsdoc": "^3.6.3",
     "lodash": "^4.17.15"
   }
 }

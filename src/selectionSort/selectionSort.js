@@ -1,3 +1,7 @@
+/**
+ * Selection sort
+ * @param {Array} items - array of numbers that need to be sorted
+ */
 const findSmallest = (items) => {
   let idx = 0;
   let smallest = items[0];
