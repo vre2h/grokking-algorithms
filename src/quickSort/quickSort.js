@@ -1,6 +1,7 @@
 /**
  * Quick sort algorithm
  * @param {Array} arr - array of numbers that going to be sorted
+ * @returns {Array} - sorted array
  */
 const quickSort = (arr) => {
   const size = arr.length;

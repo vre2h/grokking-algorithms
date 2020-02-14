@@ -4,6 +4,7 @@
  * @param {number} val - value that need to be found
  * @param {number} start - start position
  * @param {number} end - end position
+ * @returns {Array} - sorted array
  */
 const binarySearch = (arr, val, start = 0, end = arr.length - 1) => {
   const mid = Math.floor((start + end) / 2);
