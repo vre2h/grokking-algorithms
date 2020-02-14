@@ -7,7 +7,7 @@
     "test": "jest",
     "test-watch": "jest --watchAll",
     "start": "",
-    "doc": "jsdoc --readme ./README.md --destination ./docs src/**/*.js"
+    "generate-docs": "jsdoc --readme ./README.md --destination ./docs src/**/*.js"
   },
   "keywords": [],
   "author": "Oganisyan Vrezh",

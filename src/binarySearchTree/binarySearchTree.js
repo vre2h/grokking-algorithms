@@ -3,6 +3,7 @@
  * @constructor
  * @param {object} default - default node
  * @param {any} default.node - value of intitialized BST leaf
+ * @returns {Object} - binary search tree instance
  */
 const binarySearchTree = ({ node = null } = {}) => {
   /**

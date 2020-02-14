@@ -3,6 +3,7 @@
  * @param {any} tree - tree that needed to search
  * @param {string} searchedText - text that need to find in tree
  * @param {string} startNode - starting node
+ * @returns {boolean} - is tree contains {@link searchedText}
  */
 const dfs = (tree, searchedText, startNode = 'start') => {
   const queue = [...tree[startNode]];
