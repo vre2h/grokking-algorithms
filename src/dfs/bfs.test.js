@@ -1,6 +1,6 @@
 const { cloneDeep } = require('lodash');
 
-const dfs = require('./dfs');
+const bfs = require('./bfs');
 
 let data;
 let deepClone;
@@ -15,29 +15,29 @@ beforeEach(() => {
   deepClone = cloneDeep(data);
 });
 
-describe('dfs should', () => {
+describe('bfs should', () => {
   test('find person', () => {
-    const actual = dfs(data, 'andrew');
+    const actual = bfs(data, 'andrew');
 
     expect(actual).toBeTruthy();
   });
 
   test("return false if there's no user", () => {
-    const actual = dfs(data, 'vrezh');
+    const actual = bfs(data, 'vrezh');
 
     expect(actual).toBeFalsy();
   });
 
-  test('dfs should not be in infinite cycle', () => {
+  test('bfs should not be in infinite cycle', () => {
     data = { ...data, jake: ['bob', 'vrezh'] };
 
-    const actual = dfs(data, 'vrezh');
+    const actual = bfs(data, 'vrezh');
 
     expect(actual).toBeTruthy();
   });
 
   test('immutable', () => {
-    dfs(data, 'andrew');
+    bfs(data, 'andrew');
 
     expect(data).toEqual(deepClone);
   });

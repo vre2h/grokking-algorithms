@@ -10,4 +10,4 @@ _Note_, all algorithms implemented just in learning purpose and I don't recommen
 - [x] Binary Search Tree
 - [x] Quick Sort
 - [x] Selection Sort
-- [x] DFS
+- [x] BFS

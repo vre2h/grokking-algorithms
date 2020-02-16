@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: quickSort/quickSort.js</title>
+    <title>JSDoc: Source: dfs/bfs.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: quickSort/quickSort.js</h1>
+    <h1 class="page-title">Source: dfs/bfs.js</h1>
 
     
 
@@ -27,27 +27,36 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Quick sort algorithm
- * @param {Array} arr - array of numbers that going to be sorted
- * @returns {Array} - sorted array
+ * Breadth-first search
+ * @param {any} tree - tree that needed to search
+ * @param {string} searchedText - text that need to find in tree
+ * @param {string} startNode - starting node
+ * @returns {boolean} - is tree contains {@link searchedText}
  */
-const quickSort = (arr) => {
-  const size = arr.length;
+const bfs = (tree, searchedText, startNode = 'start') => {
+  const queue = [...tree[startNode]];
+  const searched = [];
 
-  if (size &lt; 2) {
-    return arr;
-  }
+  do {
+    const item = queue.shift();
+    const isChecked = searched.includes(item);
 
-  const middle = Math.floor(size / 2);
-  const pivot = arr[middle];
+    if (item === searchedText &amp;&amp; !isChecked) {
+      return item;
+    }
+    searched.push(item);
 
-  const left = arr.filter((i, idx) => idx !== middle &amp;&amp; i &lt;= pivot);
-  const right = arr.filter((i, idx) => idx !== middle &amp;&amp; i > pivot);
+    const childNodes = tree[item];
 
-  return [...quickSort(left), pivot, ...quickSort(right)];
+    if (childNodes) {
+      queue.push(...tree[item]);
+    }
+  } while (queue.length > 0);
+
+  return false;
 };
 
-module.exports = quickSort;
+module.exports = bfs;
 </code></pre>
         </article>
     </section>
