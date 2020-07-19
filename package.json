@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "jsdoc": "^3.6.3",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   }
 }
